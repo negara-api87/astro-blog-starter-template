@@ -1,0 +1,59 @@
+---
+interface Props { title: string; description?: string }
+const { title, description = "USA Home Exterior Guide" } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<!-- Adsterra Social Bar - auto popup -->
+<script is:inline src="https://commandsister.com/10/7f/f3/107ff35c173f1a25e72e7972b07ed45c.js"></script>
+<style>
+  body{font-family:system-ui;max-width:900px;margin:0 auto;padding:20px;line-height:1.6}
+  header{border-bottom:1px solid #ddd;padding-bottom:10px;margin-bottom:20px}
+  a{color:#0a66c2;text-decoration:none}
+  .card{border:1px solid #eee;padding:15px;margin:10px 0;border-radius:8px}
+  .ad-box{display:flex;justify-content:center;margin:20px 0;background:#f9f9f9;padding:10px;border-radius:8px}
+</style>
+</head>
+<body>
+<header>
+  <h1><a href="/">ExteriorCraft USA</a></h1>
+  <nav><a href="/">Home</a> | <a href="/about">About</a> | <a href="/privacy-policy">Privacy</a> | <a href="/contact">Contact</a></nav>
+  <!-- Adsterra 320x50 Top -->
+  <div class="ad-box">
+    <div>
+      <script is:inline>
+        atOptions = {
+          'key' : '94fd421dc8235579e93bcdf9b871c599',
+          'format' : 'iframe',
+          'height' : 50,
+          'width' : 320,
+          'params' : {}
+        };
+      </script>
+      <script is:inline src="https://commandsister.com/94fd421dc8235579e93bcdf9b871c599/invoke.js"></script>
+    </div>
+  </div>
+</header>
+
+<main>
+  <slot />
+</main>
+
+<!-- Adsterra Native Banner - In Article -->
+<div class="ad-box">
+  <div>
+    <script is:inline async="async" data-cfasync="false" src="https://commandsister.com/9d4182afdeece4617996373b303d17d1/invoke.js"></script>
+    <div id="container-9d4182afdeece4617996373b303d17d1"></div>
+  </div>
+</div>
+
+<footer style="margin-top:40px;border-top:1px solid #ddd;padding-top:10px;text-align:center">
+  <p>&copy; 2026 ExteriorCraft USA - All Rights Reserved</p>
+</footer>
+</body>
+</html>

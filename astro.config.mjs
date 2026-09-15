@@ -1,17 +1,5 @@
-// @ts-check
-import { defineConfig } from "astro/config";
-import mdx from "@astrojs/mdx";
-import sitemap from "@astrojs/sitemap";
-
-import cloudflare from "@astrojs/cloudflare";
-
-// https://astro.build/config
+import { defineConfig } from 'astro/config';
 export default defineConfig({
-	site: "https://example.com",
-	integrations: [mdx(), sitemap()],
-	adapter: cloudflare({
-		platformProxy: {
-			enabled: true,
-		},
-	}),
+  output: 'static',
+  site: 'https://sawit2.slimedrive.com',
 });
